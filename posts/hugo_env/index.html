@@ -26,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sentryjun.github.io\/posts\/hugo_env\/"
-        },"genre": "posts","wordcount":  711 ,
+        },"genre": "posts","wordcount":  913 ,
         "url": "https:\/\/sentryjun.github.io\/posts\/hugo_env\/","datePublished": "2021-11-04T10:24:30+08:00","dateModified": "2021-11-04T10:24:30+08:00","publisher": {
             "@type": "Organization",
             "name": "作者"},"author": {
@@ -76,7 +76,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">博客环境的搭建</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-11-04">2021-11-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 711 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-11-04">2021-11-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 913 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -91,6 +91,7 @@
       </ul>
     </li>
     <li><a href="#1-hugo安装">1 Hugo安装</a></li>
+    <li><a href="#2-部署到github-pages">2 部署到Github Pages</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>看到双十一阿里云的优惠，刚好准备搭个博客记录一下生活和学习，就开始搞了，说来惭愧研一老狗了才开始写博客。</p>
@@ -186,7 +187,28 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
       <span class="nx">typeit</span> <span class="p">=</span> <span class="kc">true</span>
       <span class="c"># 是否显示社交账号</span>
       <span class="nx">social</span> <span class="p">=</span> <span class="kc">true</span> 
-</code></pre></div><p>sdsddsafsasds</p></div><div class="post-footer" id="post-footer">
+</code></pre></div><h2 id="2-部署到github-pages">2 部署到Github Pages</h2>
+<p>这部分比较简单，就是建一个在github上建立一个repo，运行hugo生成静态网页，再将public文件夹push上去就ok了。
+每次写完后执行下面的脚本就行了。</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/usr/bin/bash
+</span><span class="cp"></span><span class="nb">set</span> -e
+
+<span class="nb">printf</span> <span class="s2">&#34;Deploying updates to GitHub...\n&#34;</span>
+<span class="c1"># 构建静态内容</span>
+hugo <span class="p">&amp;</span><span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+
+<span class="nb">wait</span>
+<span class="c1"># 切换到 Public 文件夹</span>
+<span class="nb">cd</span> public
+
+<span class="c1"># 添加更改到 git</span>
+git add .
+
+git commit -m <span class="s2">&#34;deploy&#34;</span>
+
+<span class="c1"># 推送到远程仓库</span>
+git push origin master
+</code></pre></div><p>本来想设置运行commit之后设置git的hook函数自动运行，试了试各种出问题，之后再去想吧。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
