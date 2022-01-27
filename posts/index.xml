@@ -3,7 +3,14 @@
         <title>所有文章 - Jun的摸鱼老巢</title>
         <link>https://sentryjun.github.io/posts/</link>
         <description>所有文章 | Jun的摸鱼老巢</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 09 Jan 2022 15:49:20 &#43;0800</lastBuildDate><atom:link href="https://sentryjun.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 27 Jan 2022 15:37:56 &#43;0800</lastBuildDate><atom:link href="https://sentryjun.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode56 合并区间</title>
+    <link>https://sentryjun.github.io/posts/leetcode56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</link>
+    <pubDate>Thu, 27 Jan 2022 15:37:56 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://sentryjun.github.io/posts/leetcode56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</guid>
+    <description><![CDATA[题目来源：leetcode 56 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该数组]]></description>
+</item><item>
     <title>Leetcode45 跳跃游戏</title>
     <link>https://sentryjun.github.io/posts/leetcode43-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/</link>
     <pubDate>Sun, 09 Jan 2022 15:49:20 &#43;0800</pubDate>
