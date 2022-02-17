@@ -3,7 +3,14 @@
         <title>所有文章 - Jun的摸鱼老巢</title>
         <link>https://sentryjun.github.io/posts/</link>
         <description>所有文章 | Jun的摸鱼老巢</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 27 Jan 2022 15:37:56 &#43;0800</lastBuildDate><atom:link href="https://sentryjun.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 17 Feb 2022 09:26:29 &#43;0800</lastBuildDate><atom:link href="https://sentryjun.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode65 有效数字</title>
+    <link>https://sentryjun.github.io/posts/leetcode65-%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97/</link>
+    <pubDate>Thu, 17 Feb 2022 09:26:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://sentryjun.github.io/posts/leetcode65-%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97/</guid>
+    <description><![CDATA[题目来源：leetcode 65 有效数字（按顺序）可以分成以下几个部分： 一个 小数 或者 整数 （可选）一个 &lsquo;e&rsquo; 或 &lsquo;E&rsquo; ，后面跟着一个 整数 小数（按顺序）可以分]]></description>
+</item><item>
     <title>Leetcode56 合并区间</title>
     <link>https://sentryjun.github.io/posts/leetcode56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</link>
     <pubDate>Thu, 27 Jan 2022 15:37:56 &#43;0800</pubDate>
