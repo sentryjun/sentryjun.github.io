@@ -26,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sentryjun.github.io\/posts\/jisuangailunc-hw4\/"
-        },"genre": "posts","wordcount":  642 ,
+        },"genre": "posts","wordcount":  1363 ,
         "url": "https:\/\/sentryjun.github.io\/posts\/jisuangailunc-hw4\/","datePublished": "2022-04-25T16:06:14+08:00","dateModified": "2022-04-25T16:06:14+08:00","publisher": {
             "@type": "Organization",
             "name": "高俊"},"author": {
@@ -76,8 +76,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">计算概论C 第四次作业答案</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>高俊</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-25">2022-04-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 642 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-25">2022-04-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1363 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -96,6 +96,14 @@
         <li><a href="#答案">答案：</a></li>
       </ul>
     </li>
+    <li><a href="#3-银联信用卡">3. 银联信用卡</a>
+      <ul>
+        <li><a href="#答案-1">答案</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-有序输出">4. 有序输出</a></li>
+    <li><a href="#5-字符统计">5. 字符统计</a></li>
+    <li><a href="#6-统计不重复的单词个数">6. 统计不重复的单词个数</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="1-交替输出">1. 交替输出</h2>
@@ -166,6 +174,85 @@ JAVA程序设计 65 元/本
     <span class="n">res</span> <span class="o">+=</span> <span class="n">price</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">books</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%.1f</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="n">res</span><span class="p">)</span>
+</code></pre></div><h2 id="3-银联信用卡">3. 银联信用卡</h2>
+<blockquote>
+<p>描述
+银联信用卡校验码为卡号最后一位，采用的是LUHN算法，亦称模10算法。计算方法如下。</p>
+<p>第一步：从左边第1个数字开始每隔一位乘以2。</p>
+<p>第二步：把在第一步中获得的每组乘积逐位数字（个位与十位）相加，然后再与原号码中未乘2的各位数字相加求&gt; 和。</p>
+<p>第三步：求10与第二步求和值的个位数之差，如果个位数为0，则校验码为0。</p>
+<p>例如：</p>
+<p>625965087177209（不含最后一位的卡号）</p>
+<p>第一步：6<em>2=12，5</em>2=10，6<em>2=12，0</em>2=0，7<em>2=14，7</em>2=14，2<em>2=4，9</em>2=18</p>
+<p>第二步：（1+2）+（1+0）+（1+2）+（0）+（1+4）+（1+4）+（4）+（1+8）=30</p>
+<p>30+2+9+5+8+1+7+0=62</p>
+<p>第三步：10-2=8</p>
+<p>所以，校验码是8，完整的卡号应该是6259650871772098</p>
+<p>请编写程序，检验银联信用卡卡号的合法性。</p>
+<p>输入
+16位银联信用卡卡号
+输出
+对于合法的卡号，输出“yes”，对于不合法的卡号，输出“no”</p>
+</blockquote>
+<h3 id="答案-1">答案</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">card</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">card</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">card</span><span class="p">]</span>
+<span class="n">captcha</span> <span class="o">=</span> <span class="n">card</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">card</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="n">card</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">tmp</span> <span class="o">//</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">tmp</span> <span class="o">%</span> <span class="mi">10</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">card</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="k">if</span> <span class="n">captcha</span> <span class="o">==</span> <span class="mi">10</span> <span class="o">-</span> <span class="n">total</span> <span class="o">%</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;yes&#34;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;no&#34;</span><span class="p">)</span>
+</code></pre></div><h2 id="4-有序输出">4. 有序输出</h2>
+<blockquote>
+<p>描述
+输入行数n，然后输入n行数据，每行的数据个数可能相同也可能不同，其中可能有重复的数据，每行包括多个用空&gt; 格分隔的数
+将所有的数按照从小到大的顺序不重复地输出，每行输出一个数</p>
+<p>输入
+第一行为行数n，接下来的n行分别为n行数据
+输出
+按照从小到大的顺序不重复地输出所有数据，每行输出一个数</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="p">[</span><span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">]</span>
+</code></pre></div><h2 id="5-字符统计">5. 字符统计</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">dct</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">freq_lst</span> <span class="p">:</span><span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#[&#39;a&#39;, xxx]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">char</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">:</span>
+            <span class="n">dct</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dct</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="n">dct</span><span class="p">[</span><span class="n">char</span><span class="p">],</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&#34; &#34;</span><span class="p">)</span>
+</code></pre></div><h2 id="6-统计不重复的单词个数">6. 统计不重复的单词个数</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">ans</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">w</span> <span class="o">==</span> <span class="s2">&#34;&#34;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">ans</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ans</span><span class="p">))</span>
 </code></pre></div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
