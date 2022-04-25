@@ -11,13 +11,6 @@
     <guid>https://sentryjun.github.io/posts/jisuangailunc-hw4/</guid>
     <description><![CDATA[1. 交替输出 描述 某种加密对话的方法，可以将多段对话以某种方法合并成一句无意义的对话。某种加密算法是这样实现的： 存在两句话，每一句话都有n(n&]]></description>
 </item><item>
-    <title>POJ使用说明</title>
-    <link>https://sentryjun.github.io/posts/poj%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</link>
-    <pubDate>Thu, 31 Mar 2022 10:34:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://sentryjun.github.io/posts/poj%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</guid>
-    <description><![CDATA[1. POJ的提示说明与部分错误示范 Waiting：你的程序刚刚提交，正在就包括评测。 Accepted：你的程序是正确的 Wrong Answer：运行结果]]></description>
-</item><item>
     <title>Leetcode65 有效数字</title>
     <link>https://sentryjun.github.io/posts/leetcode65-%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97/</link>
     <pubDate>Thu, 17 Feb 2022 09:26:29 &#43;0800</pubDate>
