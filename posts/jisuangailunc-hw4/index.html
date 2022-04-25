@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>计算概论C 第四次作业答案 - Jun的摸鱼老巢</title><meta name="Description" content=""><meta property="og:title" content="计算概论C 第四次作业答案" />
+<meta property="og:description" content="1. 交替输出 描述 某种加密对话的方法，可以将多段对话以某种方法合并成一句无意义的对话。某种加密算法是这样实现的： 存在两句话，每一句话都有n(n&" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sentryjun.github.io/posts/jisuangailunc-hw4/" />
+<meta property="article:published_time" content="2022-04-25T16:06:14+08:00" />
+<meta property="article:modified_time" content="2022-04-25T16:06:14+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="计算概论C 第四次作业答案"/>
+<meta name="twitter:description" content="1. 交替输出 描述 某种加密对话的方法，可以将多段对话以某种方法合并成一句无意义的对话。某种加密算法是这样实现的： 存在两句话，每一句话都有n(n&"/>
+<meta name="application-name" content="Jun的摸鱼老巢">
+<meta name="apple-mobile-web-app-title" content="Jun的摸鱼老巢"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://sentryjun.github.io/posts/jisuangailunc-hw4/" /><link rel="prev" href="https://sentryjun.github.io/posts/poj%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "计算概论C 第四次作业答案",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/sentryjun.github.io\/posts\/jisuangailunc-hw4\/"
+        },"genre": "posts","wordcount":  642 ,
+        "url": "https:\/\/sentryjun.github.io\/posts\/jisuangailunc-hw4\/","datePublished": "2022-04-25T16:06:14+08:00","dateModified": "2022-04-25T16:06:14+08:00","publisher": {
+            "@type": "Organization",
+            "name": "高俊"},"author": {
+                "@type": "Person",
+                "name": "高俊"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Jun的摸鱼老巢">Jun的摸鱼老巢</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Jun的摸鱼老巢">Jun的摸鱼老巢</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">计算概论C 第四次作业答案</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>高俊</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-25">2022-04-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 642 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-交替输出">1. 交替输出</a>
+      <ul>
+        <li><a href="#简版答案">简版答案</a></li>
+        <li><a href="#一般答案">一般答案</a></li>
+      </ul>
+    </li>
+    <li><a href="#2计算书费">2.计算书费</a>
+      <ul>
+        <li><a href="#答案">答案：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="1-交替输出">1. 交替输出</h2>
+<blockquote>
+<p>描述
+某种加密对话的方法，可以将多段对话以某种方法合并成一句无意义的对话。某种加密算法是这样实现的：</p>
+<p>存在两句话，每一句话都有n(n&gt;=1)个单词，交替存储两句话的单词到列表中，然后倒序输出结果。</p>
+<p>例如两句话分别为</p>
+<p>I love python！</p>
+<p>Python Love me！</p>
+<p>输出结果为：</p>
+<p>me! python! Love love Python I</p>
+<p>现在，如果我们已经得到了加密后的话，你能够还原出未加密的原文吗？</p>
+<p>输入
+一行，加密后的一句话，每个单词之间以空格分隔
+输出
+两行，由加密的话还原得到的原文
+样例输入
+me! python! Love love Python I
+样例输出
+I love python!</p>
+<p>Python Love me!</p>
+</blockquote>
+<h3 id="简版答案">简版答案</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">::</span><span class="o">-</span><span class="mi">2</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">::</span><span class="o">-</span><span class="mi">2</span><span class="p">]))</span>
+
+</code></pre></div><h3 id="一般答案">一般答案</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">lst_1</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lst_2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">s</span> <span class="o">=</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">lst_2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">lst_1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="n">lst_1</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="n">lst_2</span> <span class="o">=</span> <span class="n">lst_2</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lst_1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lst_2</span><span class="p">))</span>
+</code></pre></div><h2 id="2计算书费">2.计算书费</h2>
+<blockquote>
+<p>描述
+下面是一个图书的单价表：
+计算概论 28.9 元/本
+数据结构与算法 32.7 元/本
+数字逻辑 45.6元/本
+C++程序设计教程 78 元/本
+人工智能 35 元/本
+计算机体系结构 86.2 元/本
+编译原理 27.8元/本
+操作系统 43 元/本
+计算机网络 56 元/本
+JAVA程序设计 65 元/本
+给定每种图书购买的数量，编程计算应付的总费用。</p>
+<p>输入
+输入一行，包含10个整数(大于等于0，小于等于100)，分别表示购买的《计算概论》、《数据结构与算法》、&gt; 《数字逻辑》、《C++程序设计教程》、《人工智能》、《计算机体系结构》、《编译原理》、《操作系统》、&gt; 《计算机网络》、《JAVA程序设计》的数量（以本为单位）。每两个整数用一个空格分开。
+输出
+输出一行，包含一个浮点数f，表示应付的总费用。精确到小数点后一位。</p>
+</blockquote>
+<h3 id="答案">答案：</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">price</span> <span class="o">=</span> <span class="p">(</span><span class="mf">28.9</span><span class="p">,</span> <span class="mf">32.7</span><span class="p">,</span> <span class="mf">45.6</span><span class="p">,</span> <span class="mf">78.0</span><span class="p">,</span> <span class="mf">35.0</span><span class="p">,</span> <span class="mf">86.2</span><span class="p">,</span> <span class="mf">27.8</span><span class="p">,</span> <span class="mf">43.0</span><span class="p">,</span> <span class="mf">56.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">)</span>
+<span class="n">books</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">+=</span> <span class="n">price</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">books</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%.1f</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="n">res</span><span class="p">)</span>
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-04-25</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/poj%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" class="prev" rel="prev" title="POJ使用说明"><i class="fas fa-angle-left fa-fw"></i>POJ使用说明</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
