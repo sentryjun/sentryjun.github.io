@@ -26,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sentryjun.github.io\/posts\/jisuangailunc-hw4\/"
-        },"genre": "posts","wordcount":  1590 ,
+        },"genre": "posts","wordcount":  1580 ,
         "url": "https:\/\/sentryjun.github.io\/posts\/jisuangailunc-hw4\/","datePublished": "2022-04-25T16:06:14+08:00","dateModified": "2022-04-25T16:06:14+08:00","publisher": {
             "@type": "Organization",
             "name": "高俊"},"author": {
@@ -76,7 +76,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">计算概论C 第四次作业样例代码</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>高俊</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-25">2022-04-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1590 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-25">2022-04-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1580 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -103,6 +103,7 @@
         <li><a href="#样例代码-3">样例代码</a></li>
       </ul>
     </li>
+    <li><a href="#4-有序输出">4. 有序输出</a></li>
     <li><a href="#5-字符统计">5. 字符统计</a></li>
     <li><a href="#6-统计不重复的单词个数">6. 统计不重复的单词个数</a></li>
   </ul>
@@ -243,20 +244,18 @@ JAVA程序设计 65 元/本
     <span class="k">elif</span> <span class="n">x</span><span class="o">==</span><span class="mi">10</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">==</span><span class="mi">10</span><span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="s2">&#34;yes&#34;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;no&#34;</span><span class="p">)</span><span class="sb">``</span><span class="err">`</span>
-<span class="c1">## 4. 有序输出</span>
-
-<span class="o">&gt;</span> <span class="err">描述</span>
-<span class="o">&gt;</span> <span class="err">输入行数</span><span class="n">n</span><span class="err">，然后输入</span><span class="n">n行数据</span><span class="err">，每行的数据个数可能相同也可能不同，其中可能有重复的数据，每行包括多个用空</span><span class="o">&gt;</span> <span class="err">格分隔的数</span>
-<span class="o">&gt;</span> <span class="err">将所有的数按照从小到大的顺序不重复地输出，每行输出一个数</span>
-<span class="o">&gt;</span> 
-<span class="o">&gt;</span> <span class="err">输入</span>
-<span class="o">&gt;</span> <span class="err">第一行为行数</span><span class="n">n</span><span class="err">，接下来的</span><span class="n">n行分别为n行数据</span>
-<span class="o">&gt;</span> <span class="err">输出</span>
-<span class="o">&gt;</span> <span class="err">按照从小到大的顺序不重复地输出所有数据，每行输出一个数</span>
-
-<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;no&#34;</span><span class="p">)</span>
+</code></pre></div><h2 id="4-有序输出">4. 有序输出</h2>
+<blockquote>
+<p>描述
+输入行数n，然后输入n行数据，每行的数据个数可能相同也可能不同，其中可能有重复的数据，每行包括多个用空&gt; 格分隔的数
+将所有的数按照从小到大的顺序不重复地输出，每行输出一个数</p>
+<p>输入
+第一行为行数n，接下来的n行分别为n行数据
+输出
+按照从小到大的顺序不重复地输出所有数据，每行输出一个数</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 <span class="n">data</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">line</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
