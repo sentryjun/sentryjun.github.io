@@ -292,39 +292,39 @@ JAVA程序设计 65 元/本
             <span class="n">dct</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="n">dct</span><span class="p">[</span><span class="n">char</span><span class="p">],</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&#34; &#34;</span><span class="p">)</span>
-</code></pre></div><pre><code>N = int(input())
-chuan = ''
-for i in range(0,N):
-    text = str(input())
-    chuan = chuan + text
-chuan = chuan.lower()
-length = len(chuan)
-j = 0
-while length &gt; 0:
-    letter = chuan[0]
-    number = chuan.count(letter)
-    chuan = list(chuan)
-    cishu = 0
-    while cishu &lt;= number-1:
-        chuan.remove(letter)
-        cishu = cishu + 1
-    length = length - number
-    print(letter,number)
-</code></pre><pre><code>N = int(input())
-l = []
-for i in range(N):
-    s = input()
-    s = s.lower()
-    l.extend(list(s))
-c = set()
-for i in range(len(l)):
-    f = l[i]
-    if f not in c:
-        m = l.count(f)
-        print(f, m, end=&quot; &quot;)
-        print(&quot;\t&quot;)
-        c.add(f)
-</code></pre><h2 id="6-统计不重复的单词个数">6. 统计不重复的单词个数</h2>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">chuan</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">chuan</span> <span class="o">=</span> <span class="n">chuan</span> <span class="o">+</span> <span class="n">text</span>
+<span class="n">chuan</span> <span class="o">=</span> <span class="n">chuan</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chuan</span><span class="p">)</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">letter</span> <span class="o">=</span> <span class="n">chuan</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">chuan</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+    <span class="n">chuan</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">chuan</span><span class="p">)</span>
+    <span class="n">cishu</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">cishu</span> <span class="o">&lt;=</span> <span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">chuan</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+        <span class="n">cishu</span> <span class="o">=</span> <span class="n">cishu</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="n">length</span> <span class="o">-</span> <span class="n">number</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">letter</span><span class="p">,</span><span class="n">number</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">f</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34; &#34;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\t</span><span class="s2">&#34;</span><span class="p">)</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</code></pre></div><h2 id="6-统计不重复的单词个数">6. 统计不重复的单词个数</h2>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">ans</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
     <span class="n">w</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
